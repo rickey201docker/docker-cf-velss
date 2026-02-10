@@ -1,0 +1,27 @@
+{
+  "log": {
+    "level": "panic"
+  },
+  "inbounds": [
+    {
+      "type": "vless",
+      "listen": "::",
+      "listen_port": 8089,
+      "users": [
+        {
+          "uuid": "${VLESS_UUID}",
+          "flow": ""
+        }
+      ],
+      "transport": {
+        "type": "ws",
+        "path": "/web-service-ws"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct"
+    }
+  ]
+}
